@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Program that returns a lists a lists of integers representing the
-Pascal's triangle of n 
+Pascal's triangle of n
 """
 
 
