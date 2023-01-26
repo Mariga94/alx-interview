@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """Log Parsing Module"""
 import sys
 
