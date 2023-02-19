@@ -11,6 +11,8 @@ def rotate_2d_matrix(matrix):
     Returns: nothing
     """
     lst = []
-    for i in zip(*matrix):
-        lst.append(i[::-1])
-    matrix[:] = lst
+    for num in zip(*matrix):
+        lst.append([*num])
+    matrix[:]=lst  
+
+        
