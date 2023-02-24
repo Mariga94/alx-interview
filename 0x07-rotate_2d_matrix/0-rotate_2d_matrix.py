@@ -13,6 +13,4 @@ def rotate_2d_matrix(matrix):
     lst = []
     for num in zip(*matrix):
         lst.append(list(reversed([*num])))
-    matrix[:]=lst  
-
-        
+    matrix[:] = lst
