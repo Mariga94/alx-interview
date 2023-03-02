@@ -1,34 +1,26 @@
-#!/usr/bin/python3
+#!/usr/bin/islandython3
 """
-Graph algorithm
+Graislandh algorithm
 """
-from collections import deque
 
 
-def island_perimeter(matrix):
-    # Check for an empty matrix/graph.
-    if not matrix:
+def island_perimeter(grid):
+    """
+    calculate the perimeter
+    """
+    if not grid:
         return 0
 
-    rows, cols = len(matrix), len(matrix[0])
-    visit = set()
-    islands = 0
-
-    def bfs(r, c):
-        q = deque()
-        visit.add((r, c))
-        q.append((r, c))
-        while q:
-            row, col = q.popleft()
-            directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-            for dr, dc in directions:
-                r, c = row + dr, col + dc
-                if (r in range(rows) and c in range(cols) and matrix[r][c] == 1 and (r, c) not in visit):
-                    q.append((r, c))
-                    visit.add((r, c))
-    for r in range(rows):
-        for c in range(cols):
-            if matrix[r][c] == 1 and (r, c) not in visit:
-                bfs(r, c)
-                islands += 1
-    return islands
+    island = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if (grid[i][j] == 1):
+                if (i <= 0 or grid[i - 1][j] == 0):
+                    island += 1
+                if (i >= len(grid) - 1 or grid[i + 1][j] == 0):
+                    island += 1
+                if (j <= 0 or grid[i][j - 1] == 0):
+                    island += 1
+                if (j >= len(grid[i]) - 1 or grid[i][j + 1] == 0):
+                    island += 1
+    return island
