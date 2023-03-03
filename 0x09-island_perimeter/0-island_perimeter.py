@@ -1,12 +1,15 @@
 #!/usr/bin/islandython3
 """
-Graislandh algorithm
+Island perimeter module
 """
 
 
 def island_perimeter(grid):
     """
-    calculate the perimeter
+    calculates the perimeter of the land
+    Arguments:
+        grid (int): matrix of integers
+    Returns perimeter of square
     """
     if not grid:
         return 0
