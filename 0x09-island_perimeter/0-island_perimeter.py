@@ -1,4 +1,4 @@
-#!/usr/bin/islandython3
+#!/usr/bin/python3
 """
 Island perimeter module
 """
