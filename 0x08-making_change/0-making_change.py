@@ -10,6 +10,7 @@ def makeChange(coins, total):
         total (int): total number of coins
     Returns: fewest number of coins require to meet total
     """
+    # Initialize a table to store
     dp = [total + 1] * (total + 1)
     dp[0] = 0
 
